@@ -25,16 +25,16 @@ public class HttpServiceController {
      
     @RequestMapping(path = "/gta/mh", method = RequestMethod.POST, consumes = "application/xml",
             produces = "application/xml")
-    public String encryptMessage(@RequestBody String jsonRequest) throws IOException {
+    public String getMessage(@RequestBody String jsonRequest) throws IOException {
         log.info("Received request - ");
         return content.getMyString();
     }
 
     @RequestMapping(path = "/gta/sh", method = RequestMethod.POST, consumes = "application/json",
             produces = "application/json")
-    public String decryptMessage(@RequestBody String jsonRequest) {
+    public String sayHello(@RequestBody String jsonRequest) {
         log.info("Received request - " + jsonRequest);
-        return "Test";
+        return "Hello world";
     }
 
 }
